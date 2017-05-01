@@ -1,0 +1,20 @@
+#
+# There is a bug in /etc/init.d/sshtunnel::load_tunnelD(). Delete the wrong line.
+# 
+#
+
+
+config server dreamhost
+	option hostname	      proxy.alkalay.net
+	option user           tunnels
+	option IdentityFile   /etc/config/tunnelid_rsa
+	option Compression    yes
+	option CompressionLevel		6
+	option LogLevel       DEBUG
+	option retrydelay		1	
+
+config tunnelD dreamhostsocks
+	option server         dreamhost
+	option localaddress   *
+	option localport      1080
+

@@ -1,0 +1,13 @@
+function FindProxyForURL(url, host) {
+        if (dnsDomainIs(host, ".pandora.com") ||
+                dnsDomainIs(host, ".spotify.com") ||
+                dnsDomainIs(host, ".hulu.com") ||
+                dnsDomainIs(host, ".huluplus.com") ||
+                dnsDomainIs(host, ".syfy.com") ||
+                dnsDomainIs(host, ".whatismyip.com") ||
+                dnsDomainIs(host, ".test-ipv6.com") ||
+                dnsDomainIs(host, ".disney.com")) {
+
+                        return "SOCKS 172.16.174.1:1080";
+        }
+}
